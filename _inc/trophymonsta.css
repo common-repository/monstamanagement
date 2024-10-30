@@ -1,0 +1,640 @@
+.wp-admin.settings_page_trophymonsta-key-config {
+	background-color:#f3f6f8;
+}
+
+#submitted-on {
+    position: relative;
+}
+#the-comment-list .author .trophymonsta-user-comment-count {
+    display: inline;
+}
+#the-comment-list .author a span {
+    text-decoration: none;
+    color: #999;
+}
+#the-comment-list .author a span.trophymonsta-span-link {
+	text-decoration: inherit;
+	color: inherit;
+}
+#the-comment-list .trophymonsta_remove_url {
+    margin-left: 3px;
+    color: #999;
+    padding: 2px 3px 2px 0;
+}
+#the-comment-list .trophymonsta_remove_url:hover {
+    color: #A7301F;
+    font-weight: bold;
+    padding: 2px 2px 2px 0;
+}
+#dashboard_recent_comments .trophymonsta-status {
+    display: none;
+}
+.trophymonsta-status {
+    float: right;
+}
+.trophymonsta-status a {
+    color: #AAA;
+    font-style: italic;
+}
+table.comments td.comment p a {
+    text-decoration: underline;
+}
+table.comments td.comment p a:after {
+    content: attr(href);
+    color: #aaa;
+    display: inline-block; /* Show the URL without the link's underline extending under it. */
+    padding: 0 1ex; /* Because it's inline block, we can't just use spaces in the content: attribute to separate it from the link text. */
+}
+.mshot-arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #5C5C5C;
+    position: absolute;
+    left: -6px;
+    top: 91px;
+}
+.mshot-container {
+    background: #5C5C5C;
+    position: absolute;
+    top: -94px;
+    padding: 7px;
+    width: 450px;
+    height: 338px;
+    z-index: 20000;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+.trophymonsta-mshot {
+    position: absolute;
+    z-index: 100;
+}
+.trophymonsta-mshot .mshot-image {
+    margin: 0;
+    height: 338px;
+    width: 450px;
+}
+.checkforspam {
+    display: inline-block !important;
+}
+.checkforspam-progress {
+	padding-left: 1ex;
+	display: none;
+}
+.checkforspam.button-disabled .checkforspam-progress {
+	display: inline;
+}
+
+.checkforspam-spinner {
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.trophymonsta-right {
+	float: right;
+}
+
+.trophymonsta-card .trophymonsta-right {
+	margin: 1em 0;
+}
+
+.trophymonsta-alert-text {
+	color: #dd3d36;
+	font-weight: bold;
+	font-size: 120%;
+	margin-top: .5rem;
+}
+.trophymonsta-alert {
+	border: 1px solid #e5e5e5;
+	padding: 0.4em 1em 1.4em 1em;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.trophymonsta-alert h3.trophymonsta-key-status {
+	color: #fff;
+	margin: 1em 0 0.5em 0;
+}
+
+.trophymonsta-alert.trophymonsta-critical {
+	background-color: #993300;
+}
+
+.trophymonsta-alert.trophymonsta-active {
+	background-color: #649316;
+}
+
+.trophymonsta-alert p.trophymonsta-key-status {
+	font-size: 24px;
+}
+
+.trophymonsta-alert p.trophymonsta-description {
+	color:#fff;
+	font-size: 14px;
+    margin: 0 0;
+	font-style: normal;
+}
+
+.trophymonsta-alert p.trophymonsta-description a,
+.trophymonsta-alert p.trophymonsta-description a,
+.trophymonsta-alert p.trophymonsta-description a,
+.trophymonsta-alert p.trophymonsta-description a {
+	color: #fff;
+}
+
+.trophymonsta-new-snapshot {
+	margin-top: 1em;
+	padding: 1em;
+	text-align: center;
+	background: #fff;
+}
+
+.trophymonsta-new-snapshot h3 {
+    background: #f5f5f5;
+	color: #888;
+	font-size: 11px;
+    margin: 0;
+    padding: 3px;
+}
+
+.new-snapspot ul {
+	font-size: 12px;
+	width: 100%;
+}
+
+.trophymonsta-new-snapshot ul li {
+    color: #999;
+	float: left;
+    font-size: 11px;
+	padding: 0 20px;
+    text-transform: uppercase;
+	width: 33%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+.trophymonsta-new-snapshot ul li:first-child,
+.trophymonsta-new-snapshot ul li:nth-child(2) {
+	border-right:1px dotted #ccc;
+}
+
+.trophymonsta-new-snapshot ul li span {
+    color: #52accc;
+	display: block;
+	font-size: 32px;
+	font-weight: lighter;
+	line-height: 1.5em;
+}
+
+.trophymonsta-settings th:first-child {
+	vertical-align: top;
+	/* padding-top: 15px; */
+}
+.trophymonsta-settings{width:100%}
+.trophymonsta-settings th{padding:10px;}
+.trophymonsta-settings th,.trophymonsta-settings td{text-align:center}
+.trophymonsta-settings th.trophymonsta-api-key {
+	vertical-align: middle;
+	padding-top: 0;
+}
+
+.trophymonsta-settings input[type=text] {
+	width: 75%;
+}
+
+.trophymonsta-settings span.trophymonsta-note{
+	float: left;
+	padding-left: 23px;
+	font-size: 75%;
+	margin-top: -10px;
+}
+
+/**
+ * For the activation notice on the plugins page.
+ */
+
+#trophymonsta_setup_prompt {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.trophymonsta_activate {
+	border: 1px solid #4F800D;
+	padding: 5px;
+	margin: 15px 0;
+	background: #83AF24;
+	background-image: -webkit-gradient(linear, 0% 0, 80% 100%, from(#83AF24), to(#4F800D));
+	background-image: -moz-linear-gradient(80% 100% 120deg, #4F800D, #83AF24);
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+}
+
+.trophymonsta_activate .aa_a {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	font-size: 85px;
+	color: #769F33;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	z-index: 1;
+}
+
+.trophymonsta_activate .aa_button {
+	font-weight: bold;
+	border: 1px solid #029DD6;
+	border-top: 1px solid #06B9FD;
+	font-size: 15px;
+	text-align: center;
+	padding: 9px 0 8px 0;
+	color: #FFF;
+	background: #029DD6;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6), to(#0079B1));
+	background-image: -moz-linear-gradient(0% 100% 90deg, #0079B1, #029DD6);
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	width: 100%;
+	cursor: pointer;
+	margin: 0;
+}
+
+.trophymonsta_activate .aa_button:hover {
+	text-decoration: none !important;
+	border: 1px solid #029DD6;
+	border-bottom: 1px solid #00A8EF;
+	font-size: 15px;
+	text-align: center;
+	padding: 9px 0 8px 0;
+	color: #F0F8FB;
+	background: #0079B1;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#0079B1), to(#0092BF));
+	background-image: -moz-linear-gradient(0% 100% 90deg, #0092BF, #0079B1);
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.trophymonsta_activate .aa_button_border {
+	border: 1px solid #006699;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #029DD6;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6), to(#0079B1));
+	background-image: -moz-linear-gradient(0% 100% 90deg, #0079B1, #029DD6);
+}
+
+.trophymonsta_activate .aa_button_container {
+	box-sizing: border-box;
+	display: inline-block;
+	background: #DEF1B8;
+	padding: 5px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	width: 350px;
+}
+
+.trophymonsta_activate .aa_description {
+	position: absolute;
+	top: 15px;
+	left: 350px;
+	margin-left: 25px;
+	color: #E5F2B1;
+	font-size: 15px;
+	z-index: 1000;
+}
+
+.trophymonsta_activate .aa_description strong {
+	color: #FFF;
+	font-weight: normal;
+}
+
+@media (max-width: 550px) {
+	.trophymonsta_activate .aa_a {
+		display: none;
+	}
+
+	.trophymonsta_activate .aa_button_container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 782px) {
+	.trophymonsta_activate {
+		min-width: 0;
+	}
+}
+
+@media (max-width: 850px) {
+	#trophymonsta_setup_prompt .aa_description {
+		display: none;
+	}
+
+	.trophymonsta_activate {
+		min-width: 0;
+	}
+}
+
+.settings_page_trophymonsta-key-config #wpcontent {
+	padding-left: 0;
+}
+
+.trophymonsta-masthead {
+	background-color:#fff;
+	text-align:center;
+	box-shadow:0 1px 0 rgba(200,215,225,0.5),0 1px 2px #e9eff3
+}
+@media (max-width: 45rem) {
+	.trophymonsta-masthead {
+		padding:0 1.25rem
+	}
+}
+
+.trophymonsta-masthead__inside-container {
+	padding:.375rem 0;
+	margin:0 auto;
+	width:100%;
+	max-width:45rem;
+	text-align: left;
+}
+.trophymonsta-masthead__logo-container {
+	padding:.3125rem 0 0
+}
+.trophymonsta-masthead__logo {
+/* 	width:10.375rem;
+	height:7.8125rem; */
+}
+.trophymonsta-masthead__logo-link {
+	display:inline-block;
+	outline:none;
+	vertical-align:middle
+}
+.trophymonsta-masthead__logo-link:focus {
+	line-height:0;
+	box-shadow:0 0 0 2px #78dcfa
+}
+.trophymonsta-masthead__logo-link+code {
+	margin:0 10px;
+	padding:5px 9px;
+	border-radius:2px;
+	background:#e6ecf1;
+	color:#647a88
+}
+.trophymonsta-masthead__links {
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-flow:row wrap;
+	flex-flow:row wrap;
+	-ms-flex:2 50%;
+	flex:2 50%;
+	-ms-flex-pack:end;
+	justify-content:flex-end;
+	margin:0
+}
+@media (max-width: 480px) {
+	.trophymonsta-masthead__links {
+		padding-right:.625rem
+	}
+}
+.trophymonsta-masthead__link-li {
+	margin:0;
+	padding:0
+}
+.trophymonsta-masthead__link {
+	font-style:normal;
+	color:#0087be;
+	padding:.625rem;
+	display:inline-block
+}
+.trophymonsta-masthead__link:visited {
+	color:#0087be
+}
+.trophymonsta-masthead__link:active,.trophymonsta-masthead__link:hover {
+	color:#00aadc
+}
+.trophymonsta-masthead__link:hover {
+	text-decoration:underline
+}
+.trophymonsta-masthead__link .dashicons {
+	display:none
+}
+@media (max-width: 480px) {
+	.trophymonsta-masthead__link:hover,.trophymonsta-masthead__link:active {
+		text-decoration:none
+	}
+	.trophymonsta-masthead__link .dashicons {
+		display:block;
+		font-size:1.75rem
+	}
+	.trophymonsta-masthead__link span+span {
+		display:none
+	}
+}
+.trophymonsta-masthead__link-li:last-of-type .trophymonsta-masthead__link {
+	padding-right:0
+}
+
+.trophymonsta-lower {
+	margin: 0 auto;
+	text-align: left;
+	max-width: 45rem;
+	padding: 1.5rem;
+}
+
+.trophymonsta-lower .notice {
+	margin-bottom: 2rem;
+}
+
+.trophymonsta-card {
+	margin-top: 1rem;
+	margin-bottom: 0;
+	position: relative;
+	margin: 0 auto 0.625rem auto;
+	box-sizing: border-box;
+	background: white;
+	box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
+}
+
+.trophymonsta-card:after, .trophymonsta-card .inside:after, .trophymonsta-masthead__logo-container:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.trophymonsta-card .inside {
+	padding: 1.5rem;
+	padding-top: 1rem;
+	overflow-x:auto;
+}
+.trophymonsta-settings #publishing-action .trophymonsta-button{padding:5px}
+.trophymonsta-card .trophymonsta-card-actions {
+	margin-top: 1rem;
+}
+
+.settings_page_trophymonsta-key-config .update-nag {
+    display: none;
+}
+
+.trophymonsta-masthead .trophymonsta-right {
+	line-height: 2.125rem;
+	font-size: 0.9rem;
+}
+
+.trophymonsta-box {
+	box-sizing: border-box;
+	background: white;
+	border: 1px solid rgba(200, 215, 225, 0.5);
+}
+
+.trophymonsta-box h2, .trophymonsta-box h3 {
+	padding: 1.5rem 1.5rem .5rem 1.5rem;
+	margin: 0;
+}
+
+.trophymonsta-box p {
+	padding: 0 1.5rem 1.5rem 1.5rem;
+	margin: 0;
+}
+
+.trophymonsta-box p:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.trophymonsta-box .trophymonsta-right {
+	padding-right: 1.5rem;
+}
+
+.trophymonsta-boxes .trophymonsta-box {
+	margin-bottom: 0;
+	padding: 0;
+	margin-top: -1px;
+}
+
+.trophymonsta-boxes .trophymonsta-box:last-child {
+	margin-bottom: 1.5rem;
+}
+
+.trophymonsta-boxes .trophymonsta-box:first-child {
+	margin-top: 1.5rem;
+}
+
+.trophymonsta-button, .trophymonsta-button:hover, .trophymonsta-button:visited {
+	background: white;
+	border-color: #c8d7e1;
+	border-style: solid;
+	border-width: 1px 1px 2px;
+	color: #2e4453;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	outline: 0;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 500;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	vertical-align: top;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 21px;
+	border-radius: 4px;
+	padding: 7px 14px 9px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.trophymonsta-button:hover {
+	border-color: #a8bece;
+}
+
+.trophymonsta-button:active {
+	border-width: 2px 1px 1px;
+}
+
+.trophymonsta-is-primary, .trophymonsta-is-primary:hover, .trophymonsta-is-primary:visited {
+	background: #00aadc;
+	border-color: #0087be;
+	color: white;
+}
+
+.trophymonsta-is-primary:hover, .trophymonsta-is-primary:focus {
+    border-color: #005082;
+}
+
+.trophymonsta-is-primary:hover {
+	border-color: #005082;
+}
+
+.trophymonsta-section-header {
+	position: relative;
+	margin: 0 auto 0.625rem auto;
+	padding: 1rem;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #e9eff3;
+	background: #ffffff;
+	width: 100%;
+	padding-top: 0.6875rem;
+	padding-bottom: 0.6875rem;
+	display: flex;
+}
+
+.trophymonsta-section-header__label {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	line-height: 1.75rem;
+	position: relative;
+	font-size: 0.875rem;
+	color: #4f748e;
+}
+
+.trophymonsta-section-header__actions {
+	line-height: 1.75rem;
+}
+#publishing-action label {
+    /* font-weight: bold; */
+    vertical-align: -7px;
+    margin-right: 12px;
+}
+#publishing-action label b {
+	font-weight: bold;
+}
+
+input[type="submit"]:disabled{
+	pointer-events: none;
+}
+.data-left th,.data-left td{text-align:left}
+table.monstaprice th, table.monstaprice td{
+	padding:5px;
+}
+.monstaprice{border-collapse: collapse;margin-top:10px}
+.monstaprice-title {font-weight:bold}
+.monstaprice-title svg{vertical-align:middle}
+.variation dt{width: 50%;float: left}
+
+.single-product .product-article .page-content .article-body-wrap .product .product-main .content .summary-bottom .product_meta {
+	display:block !important;
+}

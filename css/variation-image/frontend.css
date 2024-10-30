@@ -1,0 +1,291 @@
+/*!
+ * Additional Variation Images Gallery for WooCommerce v1.1.36 
+ * 
+ * Author: Emran Ahmed ( emran.bd.08@gmail.com ) 
+ * Date: 1/14/2020, 2:02:57 PM
+ * Released under the GPLv3 license.
+ */
+:root {
+  --wvg-thumbnail-item-gap: 0px;
+  --wvg-gallery-margin: 0px;
+}
+
+.woo-variation-product-gallery {
+  float: left;
+  display: inline-block;
+  position: relative;
+  margin-bottom: var(--wvg-gallery-margin);
+}
+
+.woo-variation-gallery-wrapper {
+  position: relative;
+  z-index: 0;
+  display: block;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-container {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease-in-out;
+  -webkit-filter: none;
+          filter: none;
+}
+
+.woo-variation-gallery-wrapper.loading-gallery::after {
+  content: '';
+  position: absolute;
+  background: url(../../images/ajax-loader.gif?0188c2194d921a922ba976f7dfe2fb2a) no-repeat center center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.woo-variation-gallery-wrapper.loading-gallery .woo-variation-gallery-container {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.woo-variation-gallery-wrapper.loading-gallery .woo-variation-gallery-container.preload-style-blur {
+  opacity: 0.4;
+  visibility: visible;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.woo-variation-gallery-wrapper.loading-gallery .woo-variation-gallery-container.preload-style-gray {
+  opacity: 0.3;
+  visibility: visible;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image {
+  cursor: pointer;
+  opacity: 0.3;
+  float: left;
+  display: inline-block;
+  margin: 5px;
+}
+
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image.current-thumbnail,
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image:hover {
+  opacity: 1;
+}
+
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image img {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin: 0 !important;
+}
+
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image.wvg-gallery-video-thumbnail div {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image.wvg-gallery-video-thumbnail div:before {
+  position: absolute;
+  z-index: 99;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5) url(../../images/video-play.png?d6157af41baadcfb07536e7474015c9d) center center no-repeat;
+  background-size: 50%;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-slider {
+  position: relative;
+  *zoom: 1;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-slider::before,
+.woo-variation-gallery-wrapper .woo-variation-gallery-slider::after {
+  content: ' ';
+  display: table;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-slider::after {
+  clear: both;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-slider > .wvg-gallery-image:not(:first-child) {
+  display: none;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-slider img {
+  display: inline-block;
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  margin: 0 !important;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-slider {
+  position: relative;
+  *zoom: 1;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-slider::before,
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-slider::after {
+  content: ' ';
+  display: table;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-slider::after {
+  clear: both;
+}
+
+.woo-variation-gallery-wrapper .wvg-gallery-image {
+  text-align: center;
+}
+
+.woo-variation-gallery-wrapper .slick-current .wvg-gallery-image {
+  display: block !important;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-slider-wrapper {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-wrapper {
+  *zoom: 1;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-wrapper::before,
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-wrapper::after {
+  content: ' ';
+  display: table;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-thumbnail-wrapper::after {
+  clear: both;
+}
+
+.woo-variation-gallery-wrapper .woo-variation-gallery-trigger {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  font-size: 2em;
+  z-index: 999;
+  width: 36px;
+  height: 36px;
+  background: #FFFFFF;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  margin-right: var(--wvg-thumbnail-item-gap);
+  margin-bottom: var(--wvg-thumbnail-item-gap);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-2 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  --thumb-wrapper-width: 100%;
+  --total-margin: calc(var(--wvg-thumbnail-item-gap) * 1);
+  --thumb-wrapper-margin-remove: calc(var(--thumb-wrapper-width) - var(--total-margin));
+  width: calc(var(--thumb-wrapper-margin-remove) / 2);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-2 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div:nth-child(2n) {
+  margin-right: 0;
+}
+
+.woo-variation-product-gallery-thumbnail-columns-3 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  --thumb-wrapper-width: 100%;
+  --total-margin: calc(var(--wvg-thumbnail-item-gap) * 2);
+  --thumb-wrapper-margin-remove: calc(var(--thumb-wrapper-width) - var(--total-margin));
+  width: calc(var(--thumb-wrapper-margin-remove) / 3);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-3 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.woo-variation-product-gallery-thumbnail-columns-4 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  --thumb-wrapper-width: 100%;
+  --total-margin: calc(var(--wvg-thumbnail-item-gap) * 3);
+  --thumb-wrapper-margin-remove: calc(var(--thumb-wrapper-width) - var(--total-margin));
+  width: calc(var(--thumb-wrapper-margin-remove) / 4);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-4 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div:nth-child(4n) {
+  margin-right: 0;
+}
+
+.woo-variation-product-gallery-thumbnail-columns-5 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  --thumb-wrapper-width: 100%;
+  --total-margin: calc(var(--wvg-thumbnail-item-gap) * 4);
+  --thumb-wrapper-margin-remove: calc(var(--thumb-wrapper-width) - var(--total-margin));
+  width: calc(var(--thumb-wrapper-margin-remove) / 5);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-5 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div:nth-child(5n) {
+  margin-right: 0;
+}
+
+.woo-variation-product-gallery-thumbnail-columns-6 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  --thumb-wrapper-width: 100%;
+  --total-margin: calc(var(--wvg-thumbnail-item-gap) * 5);
+  --thumb-wrapper-margin-remove: calc(var(--thumb-wrapper-width) - var(--total-margin));
+  width: calc(var(--thumb-wrapper-margin-remove) / 6);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-6 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div:nth-child(6n) {
+  margin-right: 0;
+}
+
+.woo-variation-product-gallery-thumbnail-columns-7 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  --thumb-wrapper-width: 100%;
+  --total-margin: calc(var(--wvg-thumbnail-item-gap) * 6);
+  --thumb-wrapper-margin-remove: calc(var(--thumb-wrapper-width) - var(--total-margin));
+  width: calc(var(--thumb-wrapper-margin-remove) / 7);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-7 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div:nth-child(7n) {
+  margin-right: 0;
+}
+
+.woo-variation-product-gallery-thumbnail-columns-8 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div {
+  --thumb-wrapper-width: 100%;
+  --total-margin: calc(var(--wvg-thumbnail-item-gap) * 7);
+  --thumb-wrapper-margin-remove: calc(var(--thumb-wrapper-width) - var(--total-margin));
+  width: calc(var(--thumb-wrapper-margin-remove) / 8);
+}
+
+.woo-variation-product-gallery-thumbnail-columns-8 .woo-variation-gallery-thumbnail-slider:not(.slick-initialized) > div:nth-child(8n) {
+  margin-right: 0;
+}
+
+.woo-variation-gallery-has-product-thumbnail .woo-variation-gallery-thumbnail-position-bottom .woo-variation-gallery-slider-wrapper {
+  margin-bottom: var(--wvg-thumbnail-item-gap);
+}
+
+.rtl .woo-variation-product-gallery {
+  float: right;
+}
+
+.rtl .woo-variation-product-gallery .woo-variation-gallery-trigger {
+  left: .5em;
+  right: auto;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.rtl .woo-variation-product-gallery .woo-variation-gallery-wrapper .wvg-gallery-thumbnail-image {
+  float: right;
+}
